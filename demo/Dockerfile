@@ -4,8 +4,6 @@ FROM java:8
 ADD target/demo-0.0.1-SNAPSHOT.jar /demo.jar
 # 运行过程中创建一个mall-tiny-docker-file.jar文件
 RUN bash -c 'touch /demo.jar'
-# 声明服务运行在8080端口
-EXPOSE 8088
 # 指定docker容器启动时运行jar包
 ENTRYPOINT ["java", "-jar","/demo.jar"]
 # 指定维护者的名字
